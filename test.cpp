@@ -1,10 +1,12 @@
 #include <iostream>
-#include <cstdlib> // для system
+#include <string>
 using namespace std;
-
-int main() 
-{ 
-    cout << "Hello, our world!" << endl;
-    system("pause"); // Только для тех, у кого MS Visual Studio
-    return 0; 
+int main()
+{
+    string A = "jqmspo";
+    for (int i = 0; i < A.size(); ++i) {
+        A[i] = (A[i] - i) ^ 25;
+    }
+    cout << A << endl;
+    return 0;
 }
